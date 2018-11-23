@@ -205,6 +205,25 @@ VOLUME /app
 	    </section>
 
 	    <section>
+	      <pre><code>    my $pairs = start react whenever $mixer -> @pair {
+	$to-mix.send( @pair.pick ); # To avoid getting it hanged up
+	$channel-one.send(mix( @pair[0], @pair[1], $population-size ));
+	say "Mixing in ", $*THREAD.id;
+    };
+    
+	      </code></pre>
+	      <aside class='notes'>I talked about this in the last
+	      TPCiG, focusing on what was the deal. Basically, it's an
+	      evolutionary algorithm that sends the populationa after
+		the lasts generation to the  channel;
+	      this <em>mixer</em> takes populations in pairs and mixes
+		them, creating a new one. That's what
+	      the <code>mix</code> function does, mix and get only the
+		best of both.</aside>
+	    </section>
+	    
+	    </section>
+	    <section>
 	      <img src='img/time-vs-evaluations-concurrent.png'>
 	      <aside class='notes'>This is from a paper I just submitted to a conference, which might or might not be accepted. It shows something we scientists like to do: draw charts we barely understand, but have nice colors. In this case, it shows how many interations should an evolutionary algorithm undergo before stopping and mixing its population with others.</aside>
 	    </section>
