@@ -94,8 +94,9 @@ my $application = route {
     }
 }
 	  </code></pre>
-
-	    <section><pre><code>
+	</section>
+	<section><h1>Set up and start the service</h1>
+	  <pre><code>
 my Cro::Service $service = Cro::HTTP::Server.new(
     :host('localhost'), :port(2314), :$application
 );
@@ -125,7 +126,8 @@ ENV PATH="/root/.rakudobrew/bin:${PATH}"
 	      </code></pre>
 
 	    </section>
-	    <section><pre><code>RUN rakudobrew init
+	    <section><h1>Build stuff</h1>
+	      <pre><code>RUN rakudobrew init
 #Build moar
 RUN rakudobrew build moar
 #Build other utilities
@@ -153,11 +155,12 @@ VOLUME /app
 
 	    <section><h1>They host user groups, communities</h1></section>
 
-	    <section><h1>They <strong>are</strong> social learning communities</h1>
+	    <section>
+	      <h1>They <strong>are</strong> social learning communities</h1>
 	    </section>
 
 	    <section><h2 class='fragment'>(a sizeable amount of)</h2>
-	      <h1 class='fragment'>employees, employers, coworkers are there</h1>
+	      <h1>(future) employees, employers, coworkers are there</h1>
 	    </section>
 
 	    <section><h1>Keys to Perl's success</h1>
